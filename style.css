@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@100;300;500;700;900&display=swap');
+
+/* font-family: 'Noto Serif Gujarati', serif; */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-width: 250px;
+    font-family: 'Noto Serif Gujarati', serif;
+    display: flex;
+    width: 100vw;
+    margin-top: 40px;
+}
+
+.container{
+    width: 600px;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+ul li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background-color: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    /* list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* set all odd list diff color */
+ul li:nth-child(odd){
+    background: #f9f9f9;
+}
+
+
+ul li:hover{
+    background: #ddd;
+}
+
+/* background color and strike out when clicked */
+ul li.checked{
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* add checked when clicked */
+ul li.checked::before{
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* style close btn */
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover{
+    background-color: #f44336;
+    color: #fff;
+}
+
+/* style header */
+.header{
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+/* clear floats after header */
+.header:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* style input */
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+
+/* style add btn */
+.addBtn{
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 12.5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover{
+    background-color: rgb(24, 207, 85);
+    color: #fff;
+}
